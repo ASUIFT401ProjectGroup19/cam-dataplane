@@ -1,0 +1,21 @@
+services:
+  database:
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    image: mysql
+    ports:
+    - 3306:3306
+  seed:
+    command:
+    - /bin/bash
+    - -c
+    - sleep 30; cat /scripts/*.sql | mysql -u root -h database # 30 second sleep instead of a complicated health check on target db
+    depends_on:
+    - database
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    image: mysql
+    volumes:
+    - type: bind
+      source: .
+      target: /scripts
