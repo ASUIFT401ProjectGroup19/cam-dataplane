@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `post`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `post` (
-  `PostID` int NOT NULL,
+  `PostID` int AUTO_INCREMENT,
   `Description` varchar(45) DEFAULT NULL,
   `Date` date NOT NULL,
   `UserID` int NOT NULL,

@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `feedsubscription`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `feedsubscription` (
-  `SubscriptionID` int NOT NULL,
+  `SubscriptionID` int AUTO_INCREMENT,
   `UserID` int NOT NULL,
   PRIMARY KEY (`SubscriptionID`),
   KEY `UserID_idx` (`UserID`),
