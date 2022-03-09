@@ -15,7 +15,7 @@ services:
     depends_on:
     - database
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
     image: mysql
     networks:
     - compose-proxy
