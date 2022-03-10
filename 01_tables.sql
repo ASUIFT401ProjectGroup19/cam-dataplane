@@ -33,15 +33,15 @@ create table subscription
 (
     UserID         int not null,
     FollowedUserID int not null,
-    constraint primary key (UserID,FollowedUserID)
+    constraint primary key (UserID, FollowedUserID)
 );
 
 drop table if exists `user`;
 create table user
 (
     UserID    int auto_increment primary key,
-    FirstName varchar(45) not null,
-    LastName  varchar(45) not null,
-    Email     varchar(45) not null,
-    Password  varchar(60) not null
+    FirstName varchar(45)        not null,
+    LastName  varchar(45)        not null,
+    Email     varchar(45) unique not null,
+    Password  varchar(60)        not null
 );
