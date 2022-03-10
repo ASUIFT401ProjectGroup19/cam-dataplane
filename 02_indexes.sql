@@ -8,3 +8,4 @@ create index PostID_idx on media (PostID);
 
 create index UserID_idx on post (UserID);
 
+create index UserEmail_idx on user (Email);
