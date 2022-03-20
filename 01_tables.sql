@@ -46,7 +46,7 @@ create table user
     Password  varchar(60)        not null
 );
 
-drop table if exists 'tag';
+drop table if exists `tag`;
 create table tag
 (
         TagID int auto_increment primary key,
