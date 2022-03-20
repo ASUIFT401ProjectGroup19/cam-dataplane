@@ -52,4 +52,4 @@ create table tag
         TagID int auto_increment primary key,
         TagMsg  varchar(60) not null,
         PostID  int not null
-    );
+);
