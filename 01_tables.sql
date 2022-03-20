@@ -45,3 +45,11 @@ create table user
     Email     varchar(45) unique not null,
     Password  varchar(60)        not null
 );
+
+drop table if exists 'tag';
+create table tag
+(
+        TagID int auto_increment primary key,
+        TagMsg  varchar(60) not null,
+        PostID  int not null
+    );
