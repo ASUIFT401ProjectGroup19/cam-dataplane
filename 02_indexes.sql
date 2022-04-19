@@ -1,6 +1,5 @@
 use captureamoment;
 
-
 create index PostID_idx on comment (PostID);
 create index UserID_idx on comment (UserID);
 

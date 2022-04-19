@@ -5,10 +5,10 @@ drop table if exists `comment`;
 create table comment
 (
     CommentID   int auto_increment primary key,
-    CommentText varchar(45) null,
-    Liked       tinyint     null,
-    UserID      int         not null,
-    PostID      int         not null
+    CommentText varchar(500) null,
+    ParentID    int          null,
+    PostID      int          not null,
+    UserID      int          not null
 );
 
 drop table if exists `media`;
@@ -24,7 +24,7 @@ create table post
 (
     PostID      int auto_increment primary key,
     Description varchar(45) null,
-    Date        date        not null,
+    Date        datetime    not null,
     UserID      int         not null
 );
 
@@ -49,7 +49,7 @@ create table user
 drop table if exists `tag`;
 create table tag
 (
-        TagID int auto_increment primary key,
-        TagMsg  varchar(60) not null,
-        PostID  int not null
+    TagID  int auto_increment primary key,
+    TagMsg varchar(60) not null,
+    PostID int         not null
 );
